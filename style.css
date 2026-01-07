@@ -4,8 +4,8 @@
     --border: rgba(255,255,255,0.12);
     --text: #f2f2f2;
     --muted: rgba(242,242,242,0.75);
-    --accent: #ff7a18;     /* naranja supermotard */
-    --accent2: #22c55e;    /* verde “race” para detalles */
+    --accent: #ff7a18;     
+    --accent2: #22c55e;    
     --shadow: 0 14px 35px rgba(0,0,0,0.45);
     --radius: 16px;
   }
@@ -93,7 +93,7 @@
     flex-wrap: wrap;
   }
   
-  /* BOTONES */
+  
   .btn{
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -158,7 +158,7 @@
   
   .tip h3{ margin: 0 0 6px; }
   
-  /* FORM */
+  
   .form{ display: grid; gap: 12px; margin-top: 14px; }
   .form__title{ margin: 0; }
   

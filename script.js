@@ -4,7 +4,7 @@ btnScroll.addEventListener("click", () => {
   document.getElementById("setup").scrollIntoView({ behavior: "smooth" });
 });
 
-// 2) Toggle tema (simple)
+
 const btnTheme = document.getElementById("btnTheme");
 let lightMode = false;
 
@@ -28,7 +28,7 @@ btnTheme.addEventListener("click", () => {
   }
 });
 
-// 3) Recomendación del setup (form)
+
 const setupForm = document.getElementById("setupForm");
 const resultado = document.getElementById("resultado");
 
@@ -51,7 +51,7 @@ setupForm.addEventListener("submit", (e) => {
   resultado.textContent = msg;
 });
 
-// 4) Filtro de galería
+
 const chips = document.querySelectorAll(".chip");
 const photos = document.querySelectorAll(".photo");
 
@@ -70,7 +70,7 @@ chips.forEach(chip => {
   });
 });
 
-// 5) Checklist progreso + botón volver arriba
+
 const todo = document.getElementById("todo");
 const progreso = document.getElementById("progreso");
 const toTop = document.getElementById("toTop");
@@ -84,7 +84,7 @@ function updateProgress() {
 todo.addEventListener("change", updateProgress);
 updateProgress();
 
-// toTop aparece al bajar
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) toTop.style.display = "block";
   else toTop.style.display = "none";
@@ -94,7 +94,7 @@ toTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Form contacto (solo demo)
+
 const contactForm = document.getElementById("contactForm");
 const contactResult = document.getElementById("contactResult");
 
