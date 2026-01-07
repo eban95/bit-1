@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supermotard Garage</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="badge">SUPERMOTARD</div>
+      <h1 class="hero__title">Supermotard Garage</h1>
+      <p class="hero__text">
+        Guía rápida y visual para aprender lo esencial del mundo supermotard: setup, técnica, seguridad y estilo.
+      </p>
+
+      <nav class="nav">
+        <a class="nav__link" href="#que-es">¿Qué es?</a>
+        <a class="nav__link" href="#setup">Setup básico</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+        <a class="nav__link" href="#checklist">Checklist</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" id="que-es">
+      <h2>¿Qué es una Supermotard?</h2>
+      <p class="muted">
+        Una supermotard mezcla la agilidad de una moto tipo enduro/motocross con llantas y frenos para asfalto.
+        Se siente ligera, rápida de girar y perfecta para curvas.
+      </p>
+
+      <div class="grid-2">
+        <div class="info">
+          <h3>Lo que la hace “SM”</h3>
+          <ul class="list">
+            <li>Llantas de asfalto (17")</li>
+            <li>Freno delantero potente</li>
+            <li>Suspensión alta + control</li>
+            <li>Estilo agresivo en curva</li>
+          </ul>
+        </div>
+
+        <div class="info">
+          <h3>Para empezar sin sufrir</h3>
+          <ul class="list">
+            <li>Casco + guantes (sí o sí)</li>
+            <li>Revisar presión de llantas</li>
+            <li>Aprender frenada progresiva</li>
+            <li>Practicar en lugares seguros</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="setup">
+      <h2>Setup básico (rápido y útil)</h2>
+
+      <div class="tips">
+        <article class="tip">
+          <h3>1) Frenos</h3>
+          <p class="muted">La clave es frenar fuerte sin bloquear. Practica “progresivo”: suave → firme.</p>
+        </article>
+
+        <article class="tip">
+          <h3>2) Llantas</h3>
+          <p class="muted">Mira desgaste y presión. Si están muy blandas o duras, la moto se vuelve “rara”.</p>
+        </article>
+
+        <article class="tip">
+          <h3>3) Suspensión</h3>
+          <p class="muted">Si rebota mucho, se siente inestable. Si está dura, no copia bien la vía.</p>
+        </article>
+      </div>
+
+      <form class="form" id="setupForm">
+        <h3 class="form__title">Arma tu “Setup” (demo con JS)</h3>
+
+        <label class="field">
+          Estilo de uso
+          <select id="uso" class="input">
+            <option value="ciudad">Ciudad / diario</option>
+            <option value="curvas">Curvas / carretera</option>
+            <option value="pista">Pista / tandas</option>
+          </select>
+        </label>
+
+        <fieldset class="fieldset">
+          <legend>Preferencias</legend>
+
+          <label class="check">
+            <input type="checkbox" value="freno" class="pref">
+            Mejorar freno delantero
+          </label>
+
+          <label class="check">
+            <input type="checkbox" value="llantas" class="pref">
+            Buscar mejor agarre (llantas)
+          </label>
+
+          <label class="check">
+            <input type="checkbox" value="suspension" class="pref">
+            Ajustar suspensión para estabilidad
+          </label>
+        </fieldset>
+
+        <button class="btn btn--primary" type="submit">Generar recomendación</button>
+
+        <p class="result" id="resultado"></p>
+      </form>
+    </section>
+
+    <section class="card" id="galeria">
+      <div class="section-head">
+        <h2>Galería</h2>
+
+        <div class="filters">
+          <button class="chip is-active" data-filter="all">Todo</button>
+          <button class="chip" data-filter="street">Street</button>
+          <button class="chip" data-filter="track">Track</button>
+          <button class="chip" data-filter="parts">Parts</button>
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        
+        <div class="photo" data-tag="street">
+          <img src="imagenes/ktm.jpg" alt="Supermotard street">
+          <span>Street mode</span>
+        </div>
+
+        <div class="photo" data-tag="track">
+          <img src="imagenes/hq.jpg" alt="Supermotard track">
+          <span>Track mode</span>
+        </div>
+
+        <div class="photo" data-tag="parts">
+          <img src="imagenes/frenos.jpg" alt="Frenos moto">
+          <span>Frenos / Parts</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="checklist">
+      <h2>Checklist antes de rodar</h2>
+
+      <ul class="todo" id="todo">
+        <li><label><input type="checkbox"> Presión de llantas</label></li>
+        <li><label><input type="checkbox"> Pastillas + disco (frenos)</label></li>
+        <li><label><input type="checkbox"> Cadena lubricada</label></li>
+        <li><label><input type="checkbox"> Luces y direccionales</label></li>
+        <li><label><input type="checkbox"> Casco y guantes</label></li>
+      </ul>
+
+      <p class="muted small" id="progreso">Progreso: 0/5</p>
+    </section>
+
+    <section class="card" id="contacto">
+      <h2>Contacto</h2>
+      <p class="muted">Déjame un mensaje sobre qué tema de supermotard quieres que agregue al blog.</p>
+
+      <form class="form" id="contactForm">
+        <label class="field">
+          Tema
+          <input class="input" type="text" placeholder="Ej: Frenada, llantas, suspensión..." required>
+        </label>
+
+        <label class="field">
+          Mensaje
+          <textarea class="input" rows="4" placeholder="Escribe tu idea..." required></textarea>
+        </label>
+
+        <button class="btn btn--ghost" type="submit">Enviar</button>
+        <p class="result" id="contactResult"></p>
+      </form>
+    </section>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+  <footer class="footer">
+    <div class="container">
+      <small class="muted">Supermotard Garage • Proyecto web </small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
