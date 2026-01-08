@@ -5,28 +5,7 @@ btnScroll.addEventListener("click", () => {
 });
 
 
-const btnTheme = document.getElementById("btnTheme");
-let lightMode = false;
 
-btnTheme.addEventListener("click", () => {
-  lightMode = !lightMode;
-
-  if (lightMode) {
-    document.documentElement.style.setProperty("--bg", "#f7f7fb");
-    document.documentElement.style.setProperty("--text", "#121318");
-    document.documentElement.style.setProperty("--muted", "rgba(18,19,24,0.75)");
-    document.documentElement.style.setProperty("--card", "rgba(0,0,0,0.04)");
-    document.documentElement.style.setProperty("--border", "rgba(0,0,0,0.12)");
-    btnTheme.textContent = "Modo oscuro";
-  } else {
-    document.documentElement.style.setProperty("--bg", "#0e0f14");
-    document.documentElement.style.setProperty("--text", "#f2f2f2");
-    document.documentElement.style.setProperty("--muted", "rgba(242,242,242,0.75)");
-    document.documentElement.style.setProperty("--card", "rgba(255,255,255,0.06)");
-    document.documentElement.style.setProperty("--border", "rgba(255,255,255,0.12)");
-    btnTheme.textContent = "Cambiar modo";
-  }
-});
 
 
 const setupForm = document.getElementById("setupForm");
